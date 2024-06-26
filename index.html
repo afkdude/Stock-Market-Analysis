@@ -1,15 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Stock Market Analysis</title>
-</head>
-<body>
-  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <title>Stock Market Analysis</title>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Stock Market Analysis</h1>
+    </div>
 
+    <div id="chart">
+      <div id="chartAndStock">
+        <div id="chartController">
+          <div id="chart-timeline"></div>
+          <div class="toolbar">
+            <button id="one_month">1 Month</button>
 
-  <script type="module" src="index.js"></script>
-</body>
+            <button id="three_months">3 Months</button>
+
+            <button id="one_year" class="active">1 Year</button>
+
+            <button id="five_years" class="active">5 Years</button>
+          </div>
+          <div id="stockMinMax">
+            <div id="stockMin"></div>
+            <div id="stockMax"></div>
+          </div>
+        </div>
+        <div id="stockList"></div>
+      </div>
+      <div id="stockDetails">
+        <div class="upperDetails">
+          <h2>Stock Name - <span id="stockName"></span></h2>
+          
+          <h2>Book Value - <span id="book_Value"></span></h2>
+          
+          <h2>Profit - <span id="profit"></span></h2>
+          
+        </div>
+        
+
+        <h2 class="summaryHeading">Summary</h2>
+        <span id="stockSummary"></span>
+      </div>
+    </div>
+    <div id="waiting">Please wait while the page is loading...</div>
+
+    <script type="module" src="chart.js"></script>
+    <script type="module" src="index.js"></script>
+  </body>
 </html>
